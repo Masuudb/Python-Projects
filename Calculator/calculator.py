@@ -5,8 +5,8 @@ except ValueError:
     print("That's not a number...")
     exit()
 
-operator = input("Enter a logical operator (+ - / *): ")
-3.5
+operator = input("Enter a arithmetic operator (+ - / *): ")
+
 try:
     b = float(input("Enter a number: "))
 except ValueError:
@@ -35,4 +35,3 @@ else:
 print("The answer is ", answer)
 
 print("-----------------------------------------------------------")
-
