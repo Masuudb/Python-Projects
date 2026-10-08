@@ -35,8 +35,15 @@ while continue_calculating == True:
     print(f"The answer is, {answer:g} ") # Formatted the "answer" variable so that it displays integers and floats seperately
 
     choice = input("Do you want to calculate again (y/n): ") # Asking user if they want to calculate something again
-    if choice == "n":
-        continue_calculating = False
+
+
         
+    while choice != "y" and choice != "n":
+         print("Please enter y or n.")
+         choice = input("Do you want to calculate again (y/n): ")
+
+
+    if choice == "n":
+        continue_calculating = False 
 
 print("-----------------------------------------------------------")
