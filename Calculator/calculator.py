@@ -1,37 +1,42 @@
 print("---------------------Python Calculator---------------------")
-try:
-    a = float(input("Enter a number: "))
-except ValueError:
-    print("That's not a number...")
-    exit()
 
-operator = input("Enter a arithmetic operator (+ - / *): ")
-
-try:
-    b = float(input("Enter a number: "))
-except ValueError:
-    print("That's not a number...")
-    exit()
+continue_calculating = True
+while continue_calculating == True:
+    try:
+        a = float(input("Enter a number: "))
+    except ValueError:
+        print("That's not a number...")
+        exit()
+    
+    operator = input("Enter a arithmetic operator (+ - / *): ")
 
 
-if operator == "/" and b == 0:
-    print("You can't divide this number by 0...")#
-    exit()
+    try:
+        b = float(input("Enter a number: "))
+    except ValueError:
+        print("That's not a number...")
+        exit()
 
-if operator == "+":
-    answer = a + b
-elif operator == "-":
-    answer = a - b
-elif operator == "/":
-    answer = a / b
-elif operator == "*":
-    answer = a * b
-else:
-    print("You have entered something wrong.")
-    exit()
+    if operator == "/" and b == 0:
+        print("You can't divide this number by 0...")#
+        exit()
+    if operator == "+":
+        answer = a + b
+    elif operator == "-":
+        answer = a - b
+    elif operator == "/":
+       answer = a / b
+    elif operator == "*":
+       answer = a * b
+    else:
+     print("You have entered something wrong.")
+     exit()
+    
+    print("The answer is ", answer)
 
-
-
-print("The answer is ", answer)
+    choice = input("Do you want to calculate again (y/n): ")
+    if choice == "n":
+        continue_calculating = False
+        
 
 print("-----------------------------------------------------------")
