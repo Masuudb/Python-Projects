@@ -32,9 +32,9 @@ while continue_calculating == True:
      print("You have entered something wrong.")
      exit()
     
-    print("The answer is ", answer)
+    print(f"The answer is, {answer:g} ") # Formatted the "answer" variable so that it displays integers and floats seperately
 
-    choice = input("Do you want to calculate again (y/n): ")
+    choice = input("Do you want to calculate again (y/n): ") # Asking user if they want to calculate something again
     if choice == "n":
         continue_calculating = False
         
