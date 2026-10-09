@@ -10,8 +10,13 @@ while continue_calculating == True:
         except ValueError:
             print("That's not a number...")
         
-    
-    operator = input("Enter a arithmetic operator (+ - / *): ")
+    operator_valid = False
+    while operator_valid == False:
+        operator = input("Enter a arithmetic operator (+ - / *): ")
+        if operator == "+" or operator == "-" or operator == "/" or operator == "*":
+            operator_valid = True
+        else:
+            print("Invalid operator. Please try again...")
 
 
     number_valid = False
