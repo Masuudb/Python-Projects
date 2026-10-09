@@ -2,20 +2,25 @@ print("---------------------Python Calculator---------------------")
 
 continue_calculating = True
 while continue_calculating == True:
-    try:
-        a = float(input("Enter a number: "))
-    except ValueError:
-        print("That's not a number...")
-        exit()
+    number_valid = False
+    while number_valid == False:
+        try:
+            a = float(input("Enter a number: "))
+            number_valid = True
+        except ValueError:
+            print("That's not a number...")
+        
     
     operator = input("Enter a arithmetic operator (+ - / *): ")
 
 
-    try:
-        b = float(input("Enter a number: "))
-    except ValueError:
-        print("That's not a number...")
-        exit()
+    number_valid = False
+    while number_valid == False:
+        try:
+            b = float(input("Enter a number: "))
+            number_valid = True
+        except ValueError:
+            print("That's not a number...")
 
     if operator == "/" and b == 0:
         print("You can't divide this number by 0...")#
